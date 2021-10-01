@@ -28,17 +28,16 @@ Databricks notebooks support a range of languages and ways of working with data.
 
 Different types of data work will have different compute needs. Databricks supports this with different [types of clusters](https://docs.databricks.com/clusters/index.html), including requests for specialist underlying compute like GPUs.
 
-#### Machine Learning​ ![](RackMultipart20211001-4-1uea3e4_html_18d2f5aca421aef9.png)
+#### Machine Learning
 
-Figure 25: Machine Learning with [Databricks](https://databricks.com/product/machine-learning).
+![Machine Learning with Databricks](images/databricks/databricks-machine-learning.png)
+
 
 Prepared features can be stored in the [platform&#39;s feature store](https://docs.databricks.com/applications/machine-learning/preprocess-data/index.html) so that they can be discovered and shared with other teams.
 
 Model training support is integrated with notebooks - [training runs are tracked with mlflow](https://docs.databricks.com/applications/machine-learning/train-model/ml-quickstart.html) and the training job history can be seen from a panel next to the notebook. Trained models can go to the [model registry](https://docs.databricks.com/applications/machine-learning/manage-model-lifecycle/index.html), from which they can be transitioned between environments:
 
-![](RackMultipart20211001-4-1uea3e4_html_d4edd3be0ceeb112.png)
-
-Figure 26: Environment transitions with mlflow on Databricks.
+![Environment transitions with mlflow on Databricks](images/databricks/databricks-env-transitions.png)
 
 Models can be deployed for [real-time inference/serving](https://docs.databricks.com/applications/machine-learning/model-deploy/index.html). [Batch inference is also supported](https://docs.databricks.com/applications/machine-learning/model-inference/index.html), either on models in a popular framework or using spark mllib. Spark also has support for streaming.
 
