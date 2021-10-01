@@ -78,47 +78,38 @@ Mlflow takes tracking, reproducibility and portability as its key problems to so
 
 The below picture of the ML lifecycle (from [a talk by Jules Damji, Databricks](https://databricks.com/discover/managing-machine-learning-lifecycle/mlflow-projects-and-models)) helps to show how mlflow tackles key problems:
 
-![](RackMultipart20211001-4-1uea3e4_html_2bc139b6e628184e.png)
-
-Figure 38: ML lifecycle showing how mlflow helps by supporting a range of tools and supporting scaling of work (including taking from local to hosted).
+![ML lifecycle showing how mlflow helps by supporting a range of tools and supporting scaling of work (including taking from local to hosted)](images/mlflow/mlflow-lifecycle.png)
 
 At each stage of the lifecycle we see that users want to work with a range of very different tools. Users also want to work locally and then employ different tools in order to scale their work (e.g. training with a small slice of data locally and then a larger slice on a hosted environment to run a longer job). Mlflow therefore makes life cycle transitions and local-to-hosted transitions smoother by providing a standard framework of interaction and an exchange format so that artifacts are portable.
 
 We can get a good feel of mlflow by walking through its key concepts ([diagram by databricks](https://databricks.com/blog/2021/02/03/ray-mlflow-taking-distributed-machine-learning-applications-to-production.html)):
 
-![](RackMultipart20211001-4-1uea3e4_html_87a27c36a246cd02.png)
+![mlflow key concepts](images/mlflow/mlflow-concepts.png)
 
-Figure 39: mlflow key concepts.
 
 #### Tracking
 
 The tracking features of mlflow are for recording what experiments have taken place. It enables experiment runs to be stored along with all the parameters for each experiment and which models were produced. This can then be searched and referred back to, either by the original author or by others in the team. To use this feature some tracking code is added to the model training code:
 
-**with** mlflow **.** start\_run():
+```python
+   with mlflow.start_run():
+        lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
+        lr.fit(train_x, train_y)
 
-lr **=** ElasticNet(alpha **=** alpha, l1\_ratio **=** l1\_ratio, random\_state **=** 42)
+        predicted_qualities = lr.predict(test_x)
 
-lr **.** fit(train\_x, train\_y)
+        (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
 
-predicted\_qualities **=** lr **.** predict(test\_x)
-
-(rmse, mae, r2) **=** eval\_metrics(test\_y, predicted\_qualities)
-
-mlflow **.** log\_param(&quot;alpha&quot;, alpha)
-
-mlflow **.** log\_param(&quot;l1\_ratio&quot;, l1\_ratio)
-
-mlflow **.** log\_metric(&quot;rmse&quot;, rmse)
-
-mlflow **.** log\_metric(&quot;r2&quot;, r2)
-
-mlflow **.** log\_metric(&quot;mae&quot;, mae)
+        mlflow.log_param("alpha", alpha)
+        mlflow.log_param("l1_ratio", l1_ratio)
+        mlflow.log_metric("rmse", rmse)
+        mlflow.log_metric("r2", r2)
+        mlflow.log_metric("mae", mae)
+```
 
 The above is using the python API (there&#39;s also R, Java and REST APIs) and comes from an [official mlflow example](https://www.mlflow.org/docs/latest/tutorials-and-examples/tutorial.html). By default the run parameters and metrics will be logged to a [local directory](https://www.mlflow.org/docs/latest/tracking.html#where-runs-are-recorded). When you then run the command `mlflow ui` using the CLI then you can access the [history of this experiment](https://www.mlflow.org/docs/latest/tutorials-and-examples/tutorial.html) (among other things):
 
-![](RackMultipart20211001-4-1uea3e4_html_4dcebc773a8449e8.png)
-
-Figure 40: The history for an experiment shown with the mlflow UI.
+![history for an experiment shown with the mlflow UI](images/mlflow/mlflow-runs.png)
 
 [Artifacts](https://www.mlflow.org/docs/latest/tracking.html#id23) can be recorded as well as parameters and artifacts can then be downloaded from the UI. The storage of run data can be [remote instead of local](https://www.mlflow.org/docs/latest/tracking.html#scenario-4-mlflow-with-remote-tracking-server-backend-and-artifact-stores), to support sharing run info between data scientists. There&#39;s also features to [visualize/graph metrics](https://www.mlflow.org/docs/latest/tracking.html#id57) and a [new feature](https://www.mlflow.org/docs/latest/tracking.html#automatic-logging)to replace all the logging/tracking code with just `mlflow.autolog()` for specific machine learning frameworks.
 
@@ -126,9 +117,7 @@ Figure 40: The history for an experiment shown with the mlflow UI.
 
 Projects are a convention for packaging ML code so that it can run in different environments without modification. Projects also facilitate reproducibility since they capture the versions, configuration and environment that is used for a training run or serving deployment (diagram from [a talk by Jules Damji, Databricks](https://databricks.com/discover/managing-machine-learning-lifecycle/mlflow-projects-and-models)):
 
-![](RackMultipart20211001-4-1uea3e4_html_ef1ebc5ee9f0168d.png)
-
-Figure 41: The role of projects in mlflow - packaging code to run in different environments without modification.
+![The role of projects in mlflow - packaging code to run in different environments without modification.](images/mlflow/mlflow-projects.png)
 
 Essentially a project is a directory with an [MLProject file](https://www.mlflow.org/docs/latest/projects.html#mlproject-file) at the top with the MLProject file specifying the environment (e.g. docker or conda, with relevant env files also in the directory). Projects also have [entry points](https://www.mlflow.org/docs/latest/projects.html), which are commands that are meant to run for the project e.g. to train the model (entry points in an MLProject are similar to targets in a Makefile).
 
@@ -142,33 +131,29 @@ There are many ways of packaging machine learning models ([tensorflow format](ht
 
 Here is what is written automatically by the `mlflow.sklearn.save_model` function on a project with an sklearn model:
 
-# Directory written by mlflow.sklearn.save\_model(model, &quot;my\_model&quot;)
-
-my\_model/
-
+```bash
+# Directory written by mlflow.sklearn.save\_model(model, 'my_model')
+my_model/
 ├── MLmodel
-
 ├── model.pkl
-
 ├── conda.yaml
-
 └── requirements.txt
+```
 
 So here the model is serialized as a pickle file. To deserialize a python pickle, the target environment needs to have dependencies that satisfy those of the serialized code. Hence here the conda.yaml and requirements.txt files capture the dependencies. The MLmodel file contains:
 
-time\_created: 2018-05-25T17:28:53.35
+```yaml
+
+time_created: 2018-05-25T17:28:53.35
 
 flavors:
+  sklearn:
+    sklearn_version: 0.19.1
+    pickled_model: model.pkl
+  python_function:
+    loader_module: mlflow.sklearn
 
-sklearn:
-
-sklearn\_version: 0.19.1
-
-pickled\_model: model.pkl
-
-python\_function:
-
-loader\_module: mlflow.sklearn
+```
 
 Here sklearn and python\_function are flavors. Both are entered for this model because the pickle mechanism works for either. It is a general-purpose way of packaging python code (the python\_function flavor is for any python code, including custom functions) and is also the favored way of serializing sklearn models. There are a range of other [flavors in mlflow](https://www.mlflow.org/docs/latest/models.html#built-in-model-flavors) including R and spark.
 
@@ -178,12 +163,8 @@ Any model that supports python\_function or R (crate) flavors can be served loca
 
 When lots of models are being produced and many versions of a single model, then there are challenges with managing these models. We want to be able to find which version is the latest, which version is running in production and how a model version was trained. The mlflow model registry makes these details [searchable and easy to access](https://databricks.com/blog/2019/10/17/introducing-the-mlflow-model-registry.html):
 
-![](RackMultipart20211001-4-1uea3e4_html_15a7ac211d7b5d94.png)
-
-Figure 42: The mlflow model registry showing which versions of models are in which environments.
+![mlflow model registry showing which versions of models are in which environments](images/mlflow/mlflow-registry.png)
 
 Recording models to the registry is integrated with the [tracking API](https://mlflow.org/docs/latest/model-registry.html#id7). Calling `mlflow.\&lt;model_flavor\&gt;.log_model()` records that version of the model in the registry. Alternatively, models can be registered by selecting their artifacts [in the tracking UI](https://mlflow.org/docs/latest/model-registry.html#id4).
 
 The stages of models can also be transitioned (e.g. record as promoted to production) [via the API](https://mlflow.org/docs/latest/model-registry.html#transitioning-an-mlflow-models-stage) (e.g. from a CI system) or [from the UI](https://mlflow.org/docs/latest/model-registry.html#ui-workflow).
-
-![](RackMultipart20211001-4-1uea3e4_html_aeeff14e26b7f29.png)
