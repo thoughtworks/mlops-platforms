@@ -165,6 +165,6 @@ When lots of models are being produced and many versions of a single model, then
 
 ![mlflow model registry showing which versions of models are in which environments](images/mlflow/mlflow-registry.png)
 
-Recording models to the registry is integrated with the [tracking API](https://mlflow.org/docs/latest/model-registry.html#id7). Calling `mlflow.\&lt;model_flavor\&gt;.log_model()` records that version of the model in the registry. Alternatively, models can be registered by selecting their artifacts [in the tracking UI](https://mlflow.org/docs/latest/model-registry.html#id4).
+Recording models to the registry is integrated with the [tracking API](https://mlflow.org/docs/latest/model-registry.html#id7). Calling `mlflow.<model_flavor>.log_model()` records that version of the model in the registry. Alternatively, models can be registered by selecting their artifacts [in the tracking UI](https://mlflow.org/docs/latest/model-registry.html#id4).
 
 The stages of models can also be transitioned (e.g. record as promoted to production) [via the API](https://mlflow.org/docs/latest/model-registry.html#transitioning-an-mlflow-models-stage) (e.g. from a CI system) or [from the UI](https://mlflow.org/docs/latest/model-registry.html#ui-workflow).
