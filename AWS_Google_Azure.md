@@ -97,26 +97,36 @@ The cloud providers are all looking to leverage existing relationships in their 
 
 #### Workspaces
 
-![](RackMultipart20211001-4-1uea3e4_html_59b2164ca84e7c85.png)
+![Azure Machine Learning Components](images/azure/azure-ml-taxonomy.png)
 
-Figure 21 (above): Azure Machine Learning Components.
+ With Azure Machine Learning everything belongs to a workspace by default and workspaces can be shared between users and teams. The assets under a workspace are shown in the [studio web UI](https://docs.microsoft.com/en-us/azure/machine-learning/overview-what-is-machine-learning-studio).
 
-Figure 22 (below-left): Azure Machine Learning assets in studio web UI.
+![Azure Machine Learning assets in studio web UI](images/azure/azureml-studio.png)
 
-| ![](RackMultipart20211001-4-1uea3e4_html_fdfebae5baf097e1.png) | With Azure Machine Learning everything belongs to a workspace by default and workspaces can be shared between users and teams. The assets under a workspace are shown in the [studio web UI](https://docs.microsoft.com/en-us/azure/machine-learning/overview-what-is-machine-learning-studio) (see left).Let&#39;s walk through the key Azure ML concepts to get a feel for the platform.
+Let&#39;s walk through the key Azure ML concepts to get a feel for the platform.
 #### Datasets
 Datasets are references to where data is stored. The data itself isn&#39;t in the workspace but the dataset abstraction lets you work with the data through the workspace. Only metadata is copied to the workspace. Datasets can be [FileDataSets or TabularDataSets](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets#dataset-types). The data can be on a range of supported types of storage, including [blob storage, databases or the Databricks file system](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-access-data#supported-data-storage-service-types).
 #### Environments
-An environment is a configuration with variables and library dependencies, used for [training and for serving models](https://docs.microsoft.com/en-us/azure/machine-learning/concept-environments). Plays a similar role to pipenv but is instantiated through docker under the hood. |
-| --- | --- |
+An environment is a configuration with variables and library dependencies, used for [training and for serving models](https://docs.microsoft.com/en-us/azure/machine-learning/concept-environments). Plays a similar role to pipenv but is instantiated through docker under the hood. 
 
 #### Experiments
 
 Experiments are groups of training runs. Each time we train a model with a set of parameters, that falls under an experiment that can be automatically recorded. This allows us to review what was trained when and by whom. Here&#39;s a [simple script](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-environments#use-environments-for-training) to submit a training run with the Azure ML Python SDK:
 
-![](RackMultipart20211001-4-1uea3e4_html_3b16748b6a1aa641.png)
+```python
+from azureml.core import ScriptRunConfig, Experiment
+from azureml.core.environment import Environment
 
-Figure 24: Azure Machine Learning Python SDK.
+exp = Experiment(name="myexp", workspace = ws)
+# Instantiate environment
+myenv = Environment(name="myenv")
+
+# Configure the ScriptRunConfig and specify the environment
+src = ScriptRunConfig(source_directory=".", script="train.py", compute_target="local", environment=myenv)
+
+# Submit run 
+run = exp.submit(src)
+```
 
 Here we&#39;re referring to another script called &quot;train.py&quot; that contains typical model training code, [nothing azure-specific](https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-1st-experiment-sdk-train). We name the experiment that will be used and also name the environment. Both are instantiated automatically and the submit operation runs the training job.
 
