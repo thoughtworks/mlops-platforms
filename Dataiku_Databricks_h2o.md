@@ -83,15 +83,11 @@ H2o.ai provides a range of products. We&#39;ll go over the key ones and how they
 
 H2o-3 comes with a UI called Flow. Within Flow you get a notebook-like environment for working with data and building models. Cells can be written with code or you can use a wizard-like interface to choose steps like [loading a file or imputing missing values](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/data-munging.html) (which results in some [CoffeeScript going into the cell for us](https://towardsdatascience.com/getting-started-with-h2o-using-flow-b560b5d969b8)). Models can be trained [using built-in algorithms](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/data-science.html).
 
-![](RackMultipart20211001-4-1uea3e4_html_d01d9921ca18c040.png)
-
-Figure 30: The Flow UI of h2o-3 - a notebook-like environment for working with data and building models.
+![Flow UI of h2o-3 - a notebook-like environment for working with data and building models](images/h2o/h2o-3-flow-ui.png)
 
 The execution behind all this is an in-memory compute engine running in the Java Virtual Machine but you [can work with](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/quick-start-videos.html#quick-start-videos) Python or R as well as CoffeeScript and can interface to Hadoop or Spark. Models can be [exported](https://towardsdatascience.com/getting-started-with-h2o-using-flow-b560b5d969b8) to run in other Java environments (e.g. [a Spring Boot app](https://aws.amazon.com/blogs/machine-learning/training-and-serving-h2o-models-using-amazon-sagemaker/)) or [outside of Java with the provided runtime libraries](https://www.h2o.ai/products/h2o-driverless-ai/mojo-deployment-options/).
 
-![](RackMultipart20211001-4-1uea3e4_html_c3c1ad35fc5f9eff.png)
-
-Figure 31: The h2o-3 compute engine and its uses.
+![h2o-3 compute engine and its uses](images/h2o/h2o-compute-engine-uses.png)
 
 #### Sparkling Water
 
@@ -107,9 +103,7 @@ Where h2o-3 gives you assistance in building models, Driverless AI is an alterna
 
 You start with data representing historical observations with outcomes. You connect Driverless AI to your data (it supports a range of sources) and it then lets you explore the data and visualize column stats/correlations. It does test-train split and lets you set some options before running experiments. It automatically evaluates a range of different algorithms and compositions of features:
 
-![](RackMultipart20211001-4-1uea3e4_html_4600c1d9b2aac181.png)
-
-Figure 32: The h2o Driverless AI interface showing an experiment configuration. On the left we see this experiment will train GLM, LightGBM and XGBoostGBM models.
+![h2o Driverless AI interface showing an experiment configuration (left) to train GLM, LightGBM and XGBoostGBM models](images/h2o/h2o-driverless-ai.png)
 
 Driverless AI takes the approach of offering defaults and letting more advanced users drill into the details of how the experiments are conducted. It then provides insights into the model created and which features are most important for which predictions (explationations). Models can be exported to be run in a range of environments, much like h2o-3 models.
 
@@ -121,9 +115,7 @@ Driverless AI takes the approach of offering defaults and letting more advanced 
 
 [Wave](https://www.h2o.ai/products/h2o-wave/) is for developing ML-enabled and data-focused applications in python. Developers use python to write the UI as well as the backend and the data-handling. This makes it easy to embed graphs and charts.
 
-![](RackMultipart20211001-4-1uea3e4_html_6f70c1f6c2ba7ada.png)
-
-Figure 33: Developing ML-enabled applications with UIs from python with h2o Wave.
+![Developing ML-enabled applications with UIs from python with h2o Wave](images/h2o/h2o-wave.png)
 
 #### Hybrid Cloud Platform
 
