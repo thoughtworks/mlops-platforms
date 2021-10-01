@@ -8,11 +8,17 @@ This is a resource for understanding and evaluating MLOps platforms. If you're w
 
 We don't tick of features - instead we provide an open format of categories and have links to vendor documentation within cells to highlight features. This lets vendors do things their own ways.
 
-At the top of each column is the platform's name. Where possible we link to a description of the platform's key concepts. We don't link to marketing material. 
-
 ## Contributions
 
 Everyone is welcome to contribute, especially vendors. Language should be neutral - marketing language will not be accepted in any PRs.
+
+## Guides
+
+In addition to the comparison matrix below, we provide guides to key concepts of some of the platforms. This provides context to make sense of the features.
+
+- Guide to the MLOps Platforms from AWS, Google and Microsoft Azure
+- Guide to Dataiku, Databricks and h2o
+- Guide to kubeflow and mlflow
 
 ## Comparison Matrix
 
