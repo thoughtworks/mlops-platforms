@@ -21,7 +21,7 @@ This could be confusing to those familiar with kubeflow pipelines (which is [wha
 
 ​​
 
-![Google Vertex AI Pipelines screenshot](vertex-pipeline.png)
+![Google Vertex AI Pipelines screenshot](images/google_vertex/vertex-pipeline.png)
 
 Here there is a conditional deployment decision to decide whether the model is good enough to deploy or not. If it passes the test then the model is deployed from the pipeline.
 
@@ -29,9 +29,7 @@ Here there is a conditional deployment decision to decide whether the model is g
 
 The AutoML offerings are now more consistent with other parts of Google&#39;s AI stack. Basically different ways to input your data can lead to the same training path and different training paths can lead to the same deployment path. Here&#39;s a diagram from Henry Tappen and Brian Kobashikawa ([via Lak Lakshmanan](https://towardsdatascience.com/giving-vertex-ai-the-new-unified-ml-platform-on-google-cloud-a-spin-35e0f3852f25)):
 
-![Google Vertex AI Components with progression flows](vertex-components-flows.png) |
-| --- |
-| Figure 17: Google Vertex AI Components with progression flows. |
+![Google Vertex AI Components with progression flows](images/google_vertex/vertex-components-flows.png)
 
 There is also some difference, as can be seen in how datasets are handled. The dataset concept is broken into managed (which has specific metadata and lives on [specific google data products](https://towardsdatascience.com/giving-vertex-ai-the-new-unified-ml-platform-on-google-cloud-a-spin-35e0f3852f25)) or not managed. The managed datasets [are mostly for just AutoML for now](https://cloud.google.com/vertex-ai/docs/training/code-requirements).
 
@@ -53,9 +51,7 @@ Running models can be monitored for training/serving skew. For skew you supply y
 
 SageMaker aims to be both comprehensive and integrated. It has services addressed at all parts of the ML lifecycle and a variety of ways to interact with them, including its own dedicated web-based IDE (SageMaker Studio - [based on JupyterLab](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-ui.html)).
 
-![](RackMultipart20211001-4-1uea3e4_html_e82ce03a3b1fa2fb.png)
-
-Figure 18: AWS SageMaker components. Screenshot from [SageMaker website](https://aws.amazon.com/sagemaker/).
+![AWS SageMaker components. Screenshot from SageMaker website](images/aws_sagemaker/sagemaker-overview.png)
 
 The services marked as &#39;New&#39; in the above were mostly announced at re:invent in December 2020.
 
@@ -65,11 +61,9 @@ SageMaker Ground Truth is a labelling service, [similar to Google&#39;s](https:/
 
 Data Wrangler allows data scientists to visualize, transform and analyze data from supported data sources from within SageMaker Studio:
 
-![](RackMultipart20211001-4-1uea3e4_html_2d0c120df032e285.png)
+![AWS SageMaker Data Wrangler screenshot showing analysis - from SageMaker website](images/aws_sagemaker/sagemaker-wrangler-analysis.png)
 
-Figure 19: AWS SageMaker Data Wrangler screenshot showing analysis.
-
-![](RackMultipart20211001-4-1uea3e4_html_8b05e320856ae10.png)
+![AWS SageMaker Data Wrangler screenshot showing dataset - from SageMaker website](images/aws_sagemaker/dataset.png)
 
 Figure 20: AWS SageMaker Data Wrangler screenshot showing dataset.
 
