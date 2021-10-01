@@ -16,9 +16,7 @@ Kubeflow is designed for kubernetes so it aims to make the benefits of kubernete
 
 #### Kubeflow Overview
 
-![](RackMultipart20211001-4-1uea3e4_html_d91b9536757ea223.png)
-
-Figure 34: Kubeflow overview.
+![Kubeflow overview](images/kubeflow/kubeflow-overview.svg)
 
 The yellow/orange boxes on the top are supported ML tools (scikit-learn, PyTorch, Jupyter etc.). The darker blue and green boxes at the bottom represent the infrastructure with kubernetes as the base platform and deployment available for different cloud providers or on-prem or local with minikube (there&#39;s also some local interactions with an SDK).
 
@@ -30,9 +28,7 @@ The darker blue box on the middle left shows components. A lot of these are trai
 
 Before you can get into the kubeflow UI, you [first register a user](https://www.kubeflow.org/docs/components/multi-tenancy/getting-started/). Your user will have one or more profiles and with its primary profile it will own a kubernetes namespace. This provides a grouping for notebooks and other kubeflow resources and the kubernetes workloads underlying them (kubernetes resources can be restricted at a namespace level). Once into the UI, you can select namespaces that you have access to:
 
-![](RackMultipart20211001-4-1uea3e4_html_d39d509c5f8c65ee.png)
-
-Figure 35: Kubeflow dashboard showing namespace selection.
+![Kubeflow dashboard showing namespace selection](images/kubeflow/kubeflow-dashboard-ui.png)
 
 The UI provides a route to navigate between key resources such as notebooks and pipelines. The exact sections that appear in the UI is [customizable](https://www.kubeflow.org/docs/components/central-dash/customizing-menu/) and some parts will appear different for different [distributions](https://www.kubeflow.org/docs/distributions/) of kubeflow.
 
@@ -40,9 +36,7 @@ The UI provides a route to navigate between key resources such as notebooks and 
 
 Kubeflow pipelines provide a way to run ML pre-processing, training and deployment steps within a continuous workflow. Each step can be a separate container that will be scheduled by kubernetes when its resource requirements can be met. Long-running jobs can be executed with access to the resources they need with steps running in parallel and using conditional logic. Multiple pipelines can also be executed in parallel with different values for their parameters.
 
-![](RackMultipart20211001-4-1uea3e4_html_c610cae1ed42430d.png)
-
-Figure 36: A Kubeflow Pipeline run showing the logs from a selected container/step.
+![Kubeflow Pipeline run showing the logs from a selected container/step](images/kubeflow/kubeflow-pipelines.jpeg)
 
 Each step in a pipeline is implemented as an operation in python code using the Kubeflow Pipelines DSL. Components can be written to be reusable across different pipeline implementations. The finished pipeline python code is compiled to kubernetes tarball of kubernetes yaml by the pipelines sdk (specifically kubernetes yaml that uses the argo orchestration tool). The tarball is then uploaded to the pipelines server component running in the cluster and from there runs can be scheduled by specifying different parameters for the pipelines.
 
@@ -50,9 +44,7 @@ Each step in a pipeline is implemented as an operation in python code using the 
 
 Kubeflow [metadata](https://blog.kubeflow.org/jupyter/2020/10/01/lineage.html) provides an SDK for logging metadata about artifacts, executions and datasets. This is then logged in the kubeflow setup this is logged in the kubeflow metadata store and can be seen under the &#39;Artifacts&#39; [tab](https://blog.kubeflow.org/jupyter/2020/10/01/lineage.html) in the UI:
 
-![](RackMultipart20211001-4-1uea3e4_html_dd2d805b5a05231d.png)
-
-Figure 37: The artifacts tab in the Kubeflow dashboard/UI showing metadata logged for an execution.
+![Artifacts tab in the Kubeflow dashboard/UI showing metadata logged for an execution](images/kubeflow/kubeflow-metadata-artifacts.png)
 
 There are different distributions for kubeflow to integrate to cloud-specific features. On the Azure distribution the metadata storage can be [replaced with an Azure mysql database](https://www.kubeflow.org/docs/distributions/azure/azuremysql/) and [for AWS an amazon mysql can be used](https://www.kubeflow.org/docs/distributions/aws/customizing-aws/rds/).
 
