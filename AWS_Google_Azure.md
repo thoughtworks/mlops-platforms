@@ -63,7 +63,7 @@ Data Wrangler allows data scientists to visualize, transform and analyze data fr
 
 ![AWS SageMaker Data Wrangler screenshot showing analysis - from SageMaker website](images/aws_sagemaker/sagemaker-wrangler-analysis.png)
 
-![AWS SageMaker Data Wrangler screenshot showing dataset - from SageMaker website](images/aws_sagemaker/dataset.png)
+![AWS SageMaker Data Wrangler screenshot showing dataset - from SageMaker website](images/aws_sagemaker/sagemaker-wrangler-dataset.png)
 
 Figure 20: AWS SageMaker Data Wrangler screenshot showing dataset.
 
