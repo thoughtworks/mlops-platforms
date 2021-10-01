@@ -47,11 +47,9 @@ Databricks offers [AutoML features](https://docs.databricks.com/applications/mac
 
 ### Dataiku
 
-Dataiku&#39;s tagline is &#39;Everyday AI, Extraordinary&#39; people. Its platform emphasises the visual, attempting to make data tasks faster and more accessible. Users are able to explore and clean data using Data Science Studio&#39;s simple visual interface and can also write code for transforming data. Pipelines can be built up visually and transformation steps (&#39;recipes&#39;) can be pre-built drag-and-drop or crafted using a chosen language/tool. Rather than competing with Spark or Hadoop, Dataiku integrates with these and other tools. It also includes features for deployment, monitoring and collaboration.
+Dataiku&#39;s tagline is &#39;Everyday AI, Extraordinary People&#39;. Its platform emphasises the visual, attempting to make data tasks faster and more accessible. Users are able to explore and clean data using Data Science Studio&#39;s simple visual interface and can also write code for transforming data. Pipelines can be built up visually and transformation steps (&#39;recipes&#39;) can be pre-built drag-and-drop or crafted using a chosen language/tool. Rather than competing with Spark or Hadoop, Dataiku integrates with these and other tools. It also includes features for deployment, monitoring and collaboration.
 
-![](RackMultipart20211001-4-1uea3e4_html_56a6ae40c5b00304.png)
-
-Figure 27: Machine Learning lifecycle areas supported by Dataiku.
+![Machine Learning lifecycle areas supported by Dataiku](images/dataiku/dataiku-lifecycle.png)
 
 #### Data Exploration and Transformation
 
@@ -59,17 +57,13 @@ Work in Data Science Studio happens within a project. A project can contain data
 
 Once the dataset is in the project then it can be explored and manipulated. Data Science Studio infers the data types of columns and can highlight missing values or outliers. There&#39;s an easy, spreadsheet-like interface for applying operations or writing formulas to handle missing values, apply transformations or create new columns:
 
-![](RackMultipart20211001-4-1uea3e4_html_f8fd9bf3d22b2f8d.png)
-
-Figure 28: Spreadsheet-like interface for data operations in Dataiku.
+![Spreadsheet-like interface for data operations in Dataiku](images/dataiku/dataiku-spreadsheetlike-interface.png)
 
 There are many built-in transformations for different data types and they can be previewed against a small sample of data before applying to the whole set. This kind of interface with the ability to interface to large databases and hadoop has a clear appeal to business-focused data analysts (which is a [key focus for Dataiku](https://www.youtube.com/watch?v=MUwloqMJ8BQ)) and is designed to also save time for those who are [comfortable getting into the code](https://www.youtube.com/watch?v=ryZRRIjQ5Z8).
 
 Within a Data Science Studio you create Flows that correspond to Pipelines in other platforms. Within a Flow you can embed Recipes that transform Datasets. These Recipes can be pre-built, constructed visually (e.g. visual join operations) or written using code:
 
-![](RackMultipart20211001-4-1uea3e4_html_3c859e293b373b1f.png)
-
-Figure 29: A Flow in Dataiku. Recipes section on the right for adding steps to the Flow.
+![A Flow in Dataiku with recipes section on the right for adding steps to the Flow.](images/dataiku/dataiku-flow-recipes.png)
 
 #### Model Building and Deployment
 
