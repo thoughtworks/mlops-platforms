@@ -37,7 +37,7 @@ Prepared features can be stored in the [platform&#39;s feature store](https://do
 
 Model training support is integrated with notebooks - [training runs are tracked with mlflow](https://docs.databricks.com/applications/machine-learning/train-model/ml-quickstart.html) and the training job history can be seen from a panel next to the notebook. Trained models can go to the [model registry](https://docs.databricks.com/applications/machine-learning/manage-model-lifecycle/index.html), from which they can be transitioned between environments:
 
-![Environment transitions with mlflow on Databricks](images/databricks/databricks-env-transitions.png)
+![Environment transitions with mlflow on Databricks](images/databricks/databricks-env-transition.png)
 
 Models can be deployed for [real-time inference/serving](https://docs.databricks.com/applications/machine-learning/model-deploy/index.html). [Batch inference is also supported](https://docs.databricks.com/applications/machine-learning/model-inference/index.html), either on models in a popular framework or using spark mllib. Spark also has support for streaming.
 
