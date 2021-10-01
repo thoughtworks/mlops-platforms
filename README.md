@@ -14,9 +14,9 @@ Everyone is welcome to contribute, especially vendors. Language should be neutra
 
 Changes are welcome by PR but if you wish to add a new platform/column to the matrix, please create your column in a new spreadsheet (following our format) and link from an issue or PR. A maintainer will then update the [master spreadsheet](https://docs.google.com/spreadsheets/d/1HAgeRk1PEnFUkGB6Jh90l8z5JoHQqCXfSO-DKFazw-g/edit?usp=sharing) used to [generate the markdown](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/).
 
-## Platform Concepts Guides
+## Platform Concepts Intros
 
-In addition to the comparison matrix in the next section, we provide guides to key concepts of some of the platforms. This provides context to make sense of the features.
+In addition to the comparison matrix in the next section, we provide short marketing-free introductions to key concepts of some of the platforms. This provides context to make sense of the features in the matrix.
 
 - [AWS Sagemaker, Google Vertex and Microsoft Azure ML](AWS_Google_Azure.md)
 - [Dataiku, Databricks and h2o](Dataiku_Databricks_h2o.md)
