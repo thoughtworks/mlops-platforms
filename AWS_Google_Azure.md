@@ -15,17 +15,13 @@ Vertex is Google&#39;s [newly-unified](https://techcrunch.com/2021/05/18/google-
 
 This idea of pipelines as an orchestrator across offerings is illustrated here ([from TechCrunch](https://techcrunch.com/2021/05/18/google-cloud-launches-vertex-a-new-managed-machine-learning-platform/)):
 
-| ![](RackMultipart20211001-4-1uea3e4_html_2de7205f7790daa7.png) |
-| --- |
-| Figure 15: Google Vertex AI Components with Pipelines as Orchestration. |
+![Google Vertex AI Components with Pipelines as Orchestration](images/google_vertex/vertex-components.png)
 
 This could be confusing to those familiar with kubeflow pipelines (which is [what vertex pipelines are under the hood](https://cloud.google.com/vertex-ai/docs/pipelines/build-pipeline)) as kubeflow pipelines started out as a distributed training system, with each step executing in a separate container, along with a UI to inspect runs and ways to resume from a failed step. Pipelines are usable for distributed training but pipelines can also be used to perform other tasks beyond training. This is illustrated in the below [screenshot](https://cloud.google.com/blog/topics/developers-practitioners/use-vertex-pipelines-build-automl-classification-end-end-workflow):
 
 ​​
 
-| ![](RackMultipart20211001-4-1uea3e4_html_bf86227add02dfe8.png) |
-| --- |
-| Figure 16: Google Vertex AI Pipelines screenshot. |
+![Google Vertex AI Pipelines screenshot](vertex-pipeline.png)
 
 Here there is a conditional deployment decision to decide whether the model is good enough to deploy or not. If it passes the test then the model is deployed from the pipeline.
 
@@ -33,7 +29,7 @@ Here there is a conditional deployment decision to decide whether the model is g
 
 The AutoML offerings are now more consistent with other parts of Google&#39;s AI stack. Basically different ways to input your data can lead to the same training path and different training paths can lead to the same deployment path. Here&#39;s a diagram from Henry Tappen and Brian Kobashikawa ([via Lak Lakshmanan](https://towardsdatascience.com/giving-vertex-ai-the-new-unified-ml-platform-on-google-cloud-a-spin-35e0f3852f25)):
 
-| ![](RackMultipart20211001-4-1uea3e4_html_8ee3173a66e89c1d.png) |
+![Google Vertex AI Components with progression flows](vertex-components-flows.png) |
 | --- |
 | Figure 17: Google Vertex AI Components with progression flows. |
 
