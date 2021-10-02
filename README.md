@@ -12,7 +12,7 @@ We don't tick of features - instead we provide an open format of categories and 
 
 Everyone is welcome to contribute, especially vendors. Language should be neutral - marketing language will not be accepted.
 
-Changes are welcome by PR but if you wish to add a new platform/column to the matrix, please create your column in a new spreadsheet (following our format) and link from an issue or PR. A maintainer will then update the [master spreadsheet](https://docs.google.com/spreadsheets/d/1HAgeRk1PEnFUkGB6Jh90l8z5JoHQqCXfSO-DKFazw-g/edit?usp=sharing) used to [generate the markdown](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/).
+Changes are welcome by PR but if you wish to add a new platform/column to the matrix, please create your column in a new spreadsheet (following our format) and link from an issue or PR. A maintainer will then update the [master spreadsheet](https://docs.google.com/spreadsheets/d/1EKloBjSEy1G5Diy2LInvuYIzRis6M96AEwnONa7sDCA/edit?usp=sharing) used to [generate the markdown](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/).
 
 ## Platform Concepts Intros
 
