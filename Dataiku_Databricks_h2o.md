@@ -1,7 +1,13 @@
 
 ## Databricks, Dataiku, h2o.ai
 
-Here we compare another selection of established platforms, this time not cloud providers. These three platforms all have particularly strong features for data preparation and training, they all have Spark integration and AutoML capabilities. But they&#39;re also very different in detail.
+- [Databricks](#databricks-lakehouse-platform)
+- [Dataiku](#dataiku)
+- [h2o](#h2oai) 
+
+### Intro
+
+Here we compare a selection of established end-to-end platforms. These three platforms all have particularly strong features for data preparation and training, they all have Spark integration and AutoML capabilities. But they&#39;re also very different in detail.
 
 Databricks starts from data storage and data engineering and builds out to provide a platform for data engineering, machine learning and analytics. Dataiku&#39;s focus is making data analysis and ML accessible to analysts as well as speeding up ML for data scientists. H2O started as an open source Java-based engine for running machine learning algorithms. It is now a suite of tools consolidated into h2o.ai hybrid cloud.
 

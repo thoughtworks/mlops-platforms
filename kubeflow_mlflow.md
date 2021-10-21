@@ -1,6 +1,11 @@
 ## Kubeflow and mlflow
 
-There are many tools in the open source MLOps scene and some companies are putting together their own [assembled](https://www.oreilly.com/radar/why-best-of-breed-is-a-better-choice-than-all-in-one-platforms-for-data-science/) or homegrown platforms. Our focus in this guide is only on ready-made platforms. We look at the two open source platforms that [currently seem to be most popular](https://www.oreilly.com/radar/ai-adoption-in-the-enterprise-2021/). Kubeflow is a google-backed MLOps platform for kubernetes. Mlflow is backed by databricks. There are paid-for managed versions of each available but we will focus on the features and direction of the open source versions.
+- [kubeflow](#kubeflow)
+- [mlflow](#mlflow)
+
+### Intro
+
+There are many tools in the open source MLOps scene and some companies are putting together their own [assembled](https://www.oreilly.com/radar/why-best-of-breed-is-a-better-choice-than-all-in-one-platforms-for-data-science/) or homegrown platforms. Here we look at two ready-made open source platforms that cover much or all of the lifecycle and [currently seem to be most popular](https://www.oreilly.com/radar/ai-adoption-in-the-enterprise-2021/). Kubeflow is a google-backed MLOps platform for kubernetes. Mlflow is backed by databricks. There are paid-for managed versions of each available but we will focus on the features and direction of the open source versions.
 
 Kubeflow and mlflow take quite different approaches. Some have [even proposed](https://medium.com/geekculture/enhancing-kubeflow-with-mlflow-8983373d0cac) to use the two together. Kubeflow provides components that run on kubernetes, so it has a hosted environment at its heart. Mlflow starts from a local development experience and provides ways to package the local project to make it portable to a range of hosted environments.
 

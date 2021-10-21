@@ -1,5 +1,12 @@
 ## Cloud Providers
 
+
+- [Google](#google)
+- [Amazon](#amazon)
+- [Azure](#azure) 
+
+### Intro
+
 The big cloud providers offer a vast range of services and a lot of breadth in the MLOps space. These offerings can feel like a bundle of disconnected services until one sees the approach that holds it together. At a high level the cloud provider offerings can appear very similar but in detail each provider has a different set of services and a different approach to stitching them together.
 
 Google&#39;s approach with Vertex is differentiated by the way it is structured, using Vertex pipelines as an orchestrator (Vertex pipelines being a managed and integrated version of open source kubeflow pipelines). AWS Sagemaker is differentiated primarily by the range of its services and how they relate to the rest of AWS. Microsoft&#39;s strategy with Azure centers on developer experience and quality of integrations.
