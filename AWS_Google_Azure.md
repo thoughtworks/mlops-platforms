@@ -72,8 +72,6 @@ Data Wrangler allows data scientists to visualize, transform and analyze data fr
 
 ![AWS SageMaker Data Wrangler screenshot showing dataset - from SageMaker website](images/aws_sagemaker/sagemaker-wrangler-dataset.png)
 
-Figure 20: AWS SageMaker Data Wrangler screenshot showing dataset.
-
 Data Wrangler is also integrated with [Clarify](https://aws.amazon.com/sagemaker/clarify/) (which handles explainability), to highlight bias in data. This streamlines feature engineering and the resulting features can go directly to SageMaker Feature Store. Custom code can be added and SageMaker also separately has support for [Spark processing jobs](https://docs.aws.amazon.com/sagemaker/latest/dg/processing-job.html).
 
 Once features are in the Feature Store, they are available to be searched for and used by other teams. They can also be used at the serving stage as well as the training stage.
