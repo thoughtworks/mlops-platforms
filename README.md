@@ -4,7 +4,7 @@
 
 This is a resource for understanding and evaluating MLOps platforms. It is an especially confusing landscape with [hundreds of tools available](https://huyenchip.com/2020/12/30/mlops-v2.html). This project here just looks at platforms.
 
-Just understanding platforms alone is complex. Platforms have their own specializations and there is no clear line between a tool and a platform. We explain this in the [Thoughtworks Guide (COMING SOON!)](#) and the below illustrates how some of the platforms specialize in particular areas (bottom) and others aim to cover the whole lifecycle with equal focus:
+Just understanding platforms alone is complex. Platforms have their own specializations and there is no clear line between a tool and a platform. The below (from [the Thoughtworks Guide to MLOps Platforms - COMING SOON!](#)) illustrates how some of the platforms specialize in particular areas (bottom) and others aim to cover the whole lifecycle with equal focus:
 
 ![MLOps Landscape Diagram](images/whitepaper_MLOps_Landscape.png)
 
@@ -42,4 +42,4 @@ Changes are welcome by PR but if you wish to add a new platform/column to the ma
 
 ## Disclaimer
 
-We do our best to keep this information accurate and up-to-date but cannot provide guarantees. References to documentation are provided throughout so readers can check for themselves. If you spot anything inaccurate then please raise an issue or pull request (see Contributing section above).
+We do our best to keep this information accurate and up-to-date but cannot provide guarantees. References to documentation are provided throughout so readers can check for themselves. If you spot anything inaccurate then please raise an issue or pull request (see [Contributing section](#contributions)).
