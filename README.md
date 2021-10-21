@@ -22,7 +22,7 @@ We suggest to click through to the [master spreadsheet in google sheets](https:/
 
 [![matrix](images/spreadsheet_screenshot.png)](https://docs.google.com/spreadsheets/d/1nRqjnD7SCMJGmYR2gdZJ84YolLnHAMJwjSG7z7VcM6c/edit?usp=sharing)
 
-If you can't access or don't like google sheets then there is a [translation of the matrix into Github markdown](markdown.md)
+If you can't access or don't like google sheets then there is a [translation of the matrix into Github markdown](markdown_matrix.md)
 
 
 ## Contributions
