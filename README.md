@@ -45,7 +45,7 @@ Or below is the matrix in Github markdown (use scrollbars at bottom to scroll ri
 
 ## Contributions
 
-Everyone is welcome to contribute, especially vendors. Language should be neutral - marketing language will not be accepted.
+Everyone is welcome to contribute, including vendors. Language should be neutral - marketing language will not be accepted.
 
 Changes are welcome by PR but if you wish to add a new platform/column to the matrix, please create your column in a new spreadsheet (following our format) and link from an issue or PR. A maintainer will then update the [master spreadsheet](https://docs.google.com/spreadsheets/d/1nRqjnD7SCMJGmYR2gdZJ84YolLnHAMJwjSG7z7VcM6c/edit?usp=sharing) used to [generate the markdown](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/).
 
