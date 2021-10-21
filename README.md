@@ -6,7 +6,7 @@ This is a resource for understanding and evaluating MLOps platforms. It is an es
 
 Just understanding platforms alone is complex. Platforms have their own specializations and there is no clear line between a tool and a platform. We explain this in the [Thoughtworks Guide (COMING SOON!)](#) and the below illustrates how some of the platforms specialize in particular areas (bottom) and others aim to cover the whole lifecycle with equal focus:
 
-[MLOps Landscape Diagram](images/whitepaper_MLOps_Landscape.png)
+![MLOps Landscape Diagram](images/whitepaper_MLOps_Landscape.png)
 
 Even platforms that have a similar scope have different concepts and strategies, making them hard to compare directly. This repository provides resources for evaluating MLOps platforms.
 
