@@ -2,7 +2,7 @@
 
 ## What This Is
 
-This is a resource for understanding and evaluating MLOps platforms. It is an especially confusing landscape with [hundreds of tools available](https://huyenchip.com/2020/12/30/mlops-v2.html). This project here just looks at platforms.
+This is a resource for understanding and evaluating MLOps platforms. MLOps is an especially confusing landscape with [hundreds of tools available](https://huyenchip.com/2020/12/30/mlops-v2.html). This project here just looks at platforms.
 
 Just understanding platforms alone is complex. Platforms have their own specializations and there is no clear line between a tool and a platform. The below (from [the Thoughtworks Guide to MLOps Platforms - COMING SOON!](#)) illustrates how some of the platforms specialize in particular areas (bottom) and others aim to cover the whole lifecycle with equal focus:
 
@@ -16,7 +16,7 @@ If you're wondering what process to use to evaluate MLOps platforms, see the [Th
 
 We provide an open format of categories and have links to vendor documentation within cells to highlight features. This lets vendors do things their own ways and helps readers find the detail they need.
 
-## Platform Concepts Intros
+## Platform Profiles
 
 In addition to the comparison matrix in the next section, we provide short marketing-free introductions to key concepts of some of the platforms. This provides context to make sense of the features in the matrix.
 
