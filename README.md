@@ -2,7 +2,15 @@
 
 ## What This Is
 
-This is a resource for understanding and evaluating MLOps platforms. If you're wondering how to evaluate MLOps platforms, see the [Thoughtworks Guide (COMING SOON!)](#). If you know how to evaluate MLOps platforms and want some materials, read on.
+This is a resource for understanding and evaluating MLOps platforms. It is an especially confusing landscape with [hundreds of tools available](https://huyenchip.com/2020/12/30/mlops-v2.html). This project here just looks at platforms.
+
+Just understanding platforms alone is complex. Platforms have their own specializations and there is no clear line between a tool and a platform. We explain this in the [Thoughtworks Guide (COMING SOON!)](#) and the below illustrates how some of the platforms specialize in particular areas (bottom) and others aim to cover the whole lifecycle with equal focus:
+
+[MLOps Landscape Diagram](images/whitepaper_MLOps_Landscape.png)
+
+Even platforms that have a similar scope have different concepts and strategies, making them hard to compare directly. This repository provides resources for evaluating MLOps platforms.
+
+If you're wondering what process to use to evaluate MLOps platforms, see the [Thoughtworks Guide (COMING SOON!)](#). If you know how to evaluate MLOps platforms and want materials, read on.
 
 ## Format
 
