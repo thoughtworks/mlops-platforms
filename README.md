@@ -21,7 +21,8 @@ We provide an open format of categories and have links to vendor documentation w
 In addition to the comparison matrix in the next section, we provide short marketing-free introductions to key concepts of some of the platforms. This provides context to make sense of the features in the matrix.
 
 - [AWS Sagemaker](AWS_Google_Azure.md#amazon), [Google Vertex](AWS_Google_Azure.md#google) and [Microsoft Azure ML](AWS_Google_Azure.md#azure)
-- [Databricks](Dataiku_Databricks_h2o.md#databricks-lakehouse-platform), [Dataiku](Dataiku_Databricks_h2o.md#dataiku) and [h2o](Dataiku_Databricks_h2o.md#h2oai)
+- [Databricks](Dataiku_Databricks_h2o.md#databricks-lakehouse-platform), [Dataiku](Dataiku_Databricks_h2o.md#dataiku)
+- [h2o](h2o_knime.md#h2oai) and [KNIME](h2o_knime.md#knime)
 - [kubeflow](kubeflow_mlflow.md#kubeflow) and [mlflow](kubeflow_mlflow.md#mlflow)
 
 ## Comparison Matrix

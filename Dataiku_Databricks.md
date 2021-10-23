@@ -7,9 +7,9 @@
 
 ### Intro
 
-Here we compare a selection of established end-to-end platforms. These three platforms all have particularly strong features for data preparation and training, they all have Spark integration and AutoML capabilities. But they&#39;re also very different in detail.
+Here we compare two established end-to-end platforms that both have particularly strong features for data preparation and training. They also both have Spark integration and AutoML capabilities. But they&#39;re very different in detail.
 
-Databricks starts from data storage and data engineering and builds out to provide a platform for data engineering, machine learning and analytics. Dataiku&#39;s focus is making data analysis and ML accessible to analysts as well as speeding up ML for data scientists. H2O started as an open source Java-based engine for running machine learning algorithms. It is now a suite of tools consolidated into h2o.ai hybrid cloud.
+Databricks starts from data storage and data engineering and builds out to provide a platform for data engineering, machine learning and analytics. Dataiku&#39;s focus is making data analysis and ML accessible to analysts as well as speeding up ML for data scientists.
 
 ### Databricks Lakehouse Platform
 
@@ -80,53 +80,3 @@ The Lab is a separate area from a Flow so to build a model within the Flow it ne
 Models are not restricted to the AutoML features and can be [written with custom code](https://doc.dataiku.com/dss/latest/machine-learning/algorithms/in-memory-python.html#custom-models) or using [Spark MLLib](https://doc.dataiku.com/dss/latest/machine-learning/algorithms/mllib.html) or [H2O&#39;s Sparkling Water](https://doc.dataiku.com/dss/latest/machine-learning/algorithms/sparkling-water.html). Deploying a model creates an API endpoint. [API endpoints](https://doc.dataiku.com/dss/8.0/apinode/endpoints.html) can also be created for custom code functions or even SQL queries. Data Science Studio can also [host a frontend](https://doc.dataiku.com/dss/8.0/webapps/index.html#introduction-to-dss-webapps) with tools for building your own interactive Webapp or you can instead [publish a simple dashboard](https://doc.dataiku.com/dss/latest/dashboards/index.html).
 
 [Metrics](https://knowledge.dataiku.com/latest/courses/automation/metrics-checks-hands-on.html) can be tracked for Datasets (such as number of records or records in a value range) or for Models (such as ROC AUC). Checks can then be created against these Metrics so that warnings are displayed if the Checks fail.
-
-### H2o.ai
-
-H2o.ai provides a range of products. We&#39;ll go over the key ones and how they relate to each other. Let&#39;s start with the open source product &#39;h2o&#39;, which is the oldest one and shares its name with the company. The latest version is called h2o-3 (which also helps separate the product from the company names).
-
-#### H2o-3
-
-H2o-3 comes with a UI called Flow. Within Flow you get a notebook-like environment for working with data and building models. Cells can be written with code or you can use a wizard-like interface to choose steps like [loading a file or imputing missing values](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/data-munging.html) (which results in some [CoffeeScript going into the cell for us](https://towardsdatascience.com/getting-started-with-h2o-using-flow-b560b5d969b8)). Models can be trained [using built-in algorithms](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/data-science.html).
-
-![Flow UI of h2o-3 - a notebook-like environment for working with data and building models](images/h2o/h2o-3-flow-ui.png)
-
-The execution behind all this is an in-memory compute engine running in the Java Virtual Machine but you [can work with](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/quick-start-videos.html#quick-start-videos) Python or R as well as CoffeeScript and can interface to Hadoop or Spark. Models can be [exported](https://towardsdatascience.com/getting-started-with-h2o-using-flow-b560b5d969b8) to run in other Java environments (e.g. [a Spring Boot app](https://aws.amazon.com/blogs/machine-learning/training-and-serving-h2o-models-using-amazon-sagemaker/)) or [outside of Java with the provided runtime libraries](https://www.h2o.ai/products/h2o-driverless-ai/mojo-deployment-options/).
-
-![h2o-3 compute engine and its uses](images/h2o/h2o-compute-engine-uses.png)
-
-#### Sparkling Water
-
-This is [h2o-3 but on top of Spark](https://docs.h2o.ai/#sparkling-water). So you can [run h2o algorithms on Spark](https://docs.h2o.ai/sparkling-water/3.1/latest-stable/doc/about.html).
-
-#### Steam
-
-Steam is for [managing h2o jobs on top of Spark or Kubernetes](https://www.h2o.ai/enterprise-support/#enterprise-security).
-
-#### Driverless AI
-
-Where h2o-3 gives you assistance in building models, Driverless AI is an alternative approach that is full-on AutoML. With h2o-3 you pick the algorithm but with Driverless AI a range of algorithms get tried out for you to pick the best.
-
-You start with data representing historical observations with outcomes. You connect Driverless AI to your data (it supports a range of sources) and it then lets you explore the data and visualize column stats/correlations. It does test-train split and lets you set some options before running experiments. It automatically evaluates a range of different algorithms and compositions of features:
-
-![h2o Driverless AI interface showing an experiment configuration (left) to train GLM, LightGBM and XGBoostGBM models](images/h2o/h2o-driverless-ai.png)
-
-Driverless AI takes the approach of offering defaults and letting more advanced users drill into the details of how the experiments are conducted. It then provides insights into the model created and which features are most important for which predictions (explationations). Models can be exported to be run in a range of environments, much like h2o-3 models.
-
-#### MLOps
-
-[H2o MLOps](https://docs.h2o.ai/mlops-release/latest-stable/docs/userguide/index.html) is a model deployment and monitoring suite that runs on kubernetes. It handles models built with h2o-3 or h2o Driverless AI or you can Bring Your Own Model (provided you [specify a detailed schema for it](https://docs.h2o.ai/mlops-release/latest-stable/docs/userguide/byom.html#mlops-byom)).
-
-#### Wave
-
-[Wave](https://www.h2o.ai/products/h2o-wave/) is for developing ML-enabled and data-focused applications in python. Developers use python to write the UI as well as the backend and the data-handling. This makes it easy to embed graphs and charts.
-
-![Developing ML-enabled applications with UIs from python with h2o Wave](images/h2o/h2o-wave.png)
-
-#### Hybrid Cloud Platform
-
-[H2o Hybrid Cloud Platform](https://docs.h2o.ai/h2o-ai-cloud/index.html) brings together other h2o products to provide an integrated setup for developing, deploying, hosting and sharing applications. It runs on kubernetes so it can be installed on public, private or hybrid clouds.
-
-The public face of the platform is the [Appstore](https://docs.h2o.ai/h2o-ai-cloud/docs/userguide/basic-concepts). This shows a set of tiles for published apps built with Wave. The platform allows apps built with Wave to be operationalised and published to the Appstore. [Driverless AI and h2o-3 projects can also be leveraged](https://www.h2o.ai/hybrid-cloud/request-demo/). The Driverless AI projects are automatically available in the MLOps screens in the platform. Deployed models can be leveraged by apps built with Wave.
-
-Deployed models can be monitored using the features from the MLOps product. Steam is also integrated for managing h2o jobs.
