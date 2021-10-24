@@ -110,11 +110,11 @@ Given that we essentially have a sequence of operations in a workflow, why not h
 
 Workflows generally have lots of text and boxes on them. These are annotations - they&#39;re not functional. They&#39;re comments. It&#39;s just the icon-like boxes that capture operations - these are the nodes.
 
-You compose workflows by dragging and dropping nodes onto a canvas from the node repository. You then configure exactly what each node does. In the above we start with a File Reader node that loads a CSV file, the data set is then passed on a Partitioning node and the training set goes on to train a Random Forest model. This process happens in the [KNIME Analytics Platform workbench](https://docs.knime.com/2019-06/analytics_platform_workbench_guide/index.html#the-knime-workbench), which is a desktop application:
+You compose workflows by dragging and dropping nodes onto a canvas from the node repository. You then configure exactly what each node does. The configuration is a pop-up for each node and may not show in the diagram but is part of the saved workflow. In the above we start with a File Reader node that loads a CSV file, the data set is then passed on a Partitioning node and the training set goes on to train a Random Forest model. You draw and configure these workflows in the [KNIME Analytics Platform workbench](https://docs.knime.com/2019-06/analytics_platform_workbench_guide/index.html#the-knime-workbench), which is a desktop application:
 
 ![knime workbench](images/knime/knime_workbench.png)
 
-Workflows live in the top-left. There&#39;s a canvas in the middle and nodes can be dropped onto the canvas from the bottom-left. The console at the bottom right is for debugging as workflows can also be executed from here.
+Workflows live in the top-left. There&#39;s a canvas in the middle and nodes can be dropped onto the canvas from the bottom-left. The console at the bottom right is for debugging as workflows can also be executed from within the workbench.
 
 Let&#39;s now understand more about how KNIME workflows work.
 
