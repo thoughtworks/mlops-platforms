@@ -7,7 +7,7 @@
 
 ### Intro
 
-Here we compare two established end-to-end platforms that both have particularly strong features for data preparation and training. They also both have Spark integration and AutoML capabilities. But they&#39;re very different in detail.
+Here we profile two established end-to-end platforms that both have particularly strong features for data preparation and training. They also both have Spark integration and AutoML capabilities. But they&#39;re very different in detail.
 
 Databricks starts from data storage and data engineering and builds out to provide a platform for data engineering, machine learning and analytics. Dataiku&#39;s focus is making data analysis and ML accessible to analysts as well as speeding up ML for data scientists.
 

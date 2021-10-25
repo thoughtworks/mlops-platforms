@@ -6,7 +6,7 @@
 
 ### Intro
 
-Here we compare two platforms that are each end-to-end and each take their own particular view of the model building process and data science experience. 
+Here we profile two platforms that are each end-to-end and each take their own particular view of the model building process and data science experience. 
 
 H2O started as an open source Java-based engine for running machine learning algorithms. It is now a suite of tools consolidated into h2o.ai hybrid cloud. KNIME Analytics Platform offers a visual, low-code way to do data science and data analysis tasks. The open source KNIME Analytics Platform is supplemented with KNIME Server, which adds hosting, collaboration and monitoring capabilities for enterprise.
 
