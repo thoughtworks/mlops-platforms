@@ -1,8 +1,6 @@
 # MLOps Platforms
 
-## What This Is
-
-This is a resource for understanding and evaluating MLOps platforms. MLOps is an especially confusing landscape with [hundreds of tools available](https://huyenchip.com/2020/12/30/mlops-v2.html). This project helps to navigate the space of MLOps platforms.
+MLOps is an especially confusing landscape with [hundreds of tools available](https://huyenchip.com/2020/12/30/mlops-v2.html). This project helps to navigate the space of MLOps platforms.
 
 Understanding MLOps platforms is complex. Platforms have their own specializations and there is no clear line between a tool (with a narrow focus) and a platform (which supports many ML lifecycle activities). The below (from [the Thoughtworks Guide to MLOps Platforms - COMING SOON!](#)) illustrates how some of the platforms specialize in particular areas (bottom) and others aim to cover the whole lifecycle with equal focus (top):
 
