@@ -2,13 +2,13 @@
 
 MLOps is an especially confusing landscape with [hundreds of tools available](https://huyenchip.com/2020/12/30/mlops-v2.html). This project helps to navigate the space of MLOps platforms.
 
-Understanding MLOps platforms is complex. Platforms have their own specializations and there is no clear line between a tool (with a narrow focus) and a platform (which supports many ML lifecycle activities). The below (from [the Thoughtworks Guide to MLOps Platforms - COMING SOON!](#)) illustrates how some of the platforms specialize in particular areas (bottom) and others aim to cover the whole lifecycle with equal focus (top):
+Understanding MLOps platforms is complex. Platforms have their own specializations and there is no clear line between a tool (with a narrow focus) and a platform (which supports many ML lifecycle activities). The below (from [the Thoughtworks Guide to MLOps Platforms](https://www.thoughtworks.com/content/dam/thoughtworks/documents/whitepaper/tw_whitepaper_guide_to_evaluating_mlops_platforms_2021.pdf)) illustrates how some of the platforms specialize in particular areas (bottom) and others aim to cover the whole lifecycle with equal focus (top):
 
 ![MLOps Landscape Diagram](images/whitepaper_MLOps_Landscape.png)
 
 Even platforms that have a similar scope have different concepts and strategies, making them hard to compare directly. This repository provides resources for evaluating MLOps platforms.
 
-If you're wondering what process to use to evaluate MLOps platforms, see the [Thoughtworks Guide (COMING SOON!)](#). If you know how to evaluate MLOps platforms and want materials, read on.
+If you're wondering what process to use to evaluate MLOps platforms, see the [Thoughtworks Guide](https://www.thoughtworks.com/content/dam/thoughtworks/documents/whitepaper/tw_whitepaper_guide_to_evaluating_mlops_platforms_2021.pdf). If you know how to evaluate MLOps platforms and want materials, read on.
 
 ### Comparison Matrix Format
 
