@@ -41,7 +41,7 @@ You start with data representing historical observations with outcomes. You conn
 
 ![h2o Driverless AI interface showing an experiment configuration (left) to train GLM, LightGBM and XGBoostGBM models](images/h2o/h2o-driverless-ai.png)
 
-Driverless AI takes the approach of offering defaults and letting more advanced users drill into the details of how the experiments are conducted. It then provides insights into the model created and which features are most important for which predictions (explationations). Models can be exported to be run in a range of environments, much like h2o-3 models.
+Driverless AI takes the approach of offering defaults and letting more advanced users drill into the details of how the experiments are conducted. It then provides insights into the model created and which features are most important for which predictions (explanations). Models can be exported to be run in a range of environments, much like h2o-3 models.
 
 #### MLOps
 

@@ -137,7 +137,7 @@ There are many ways of packaging machine learning models ([tensorflow format](ht
 Here is what is written automatically by the `mlflow.sklearn.save_model` function on a project with an sklearn model:
 
 ```bash
-# Directory written by mlflow.sklearn.save\_model(model, 'my_model')
+# Directory written by mlflow.sklearn.save_model(model, 'my_model')
 my_model/
 ├── MLmodel
 ├── model.pkl
