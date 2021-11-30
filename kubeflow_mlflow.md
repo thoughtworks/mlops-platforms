@@ -116,7 +116,7 @@ The above is using the python API (there&#39;s also R, Java and REST APIs) and c
 
 ![history for an experiment shown with the mlflow UI](images/mlflow/mlflow-runs.png)
 
-[Artifacts](https://www.mlflow.org/docs/latest/tracking.html#id23) can be recorded as well as parameters and artifacts can then be downloaded from the UI. The storage of run data can be [remote instead of local](https://www.mlflow.org/docs/latest/tracking.html#scenario-4-mlflow-with-remote-tracking-server-backend-and-artifact-stores), to support sharing run info between data scientists. There&#39;s also features to [visualize/graph metrics](https://www.mlflow.org/docs/latest/tracking.html#id57) and a [new feature](https://www.mlflow.org/docs/latest/tracking.html#automatic-logging)to replace all the logging/tracking code with just `mlflow.autolog()` for specific machine learning frameworks.
+[Artifacts](https://www.mlflow.org/docs/latest/tracking.html#id23) can be recorded as well as parameters and artifacts can then be downloaded from the UI. The storage of run data can be [remote instead of local](https://www.mlflow.org/docs/latest/tracking.html#scenario-4-mlflow-with-remote-tracking-server-backend-and-artifact-stores), to support sharing run info between data scientists. There&#39;s also features to [visualize/graph metrics](https://www.mlflow.org/docs/latest/tracking.html#id57) and a [new feature](https://www.mlflow.org/docs/latest/tracking.html#automatic-logging) to replace all the logging/tracking code with just `mlflow.autolog()` for specific machine learning frameworks.
 
 #### Projects
 
@@ -126,7 +126,7 @@ Projects are a convention for packaging ML code so that it can run in different 
 
 Essentially a project is a directory with an [MLProject file](https://www.mlflow.org/docs/latest/projects.html#mlproject-file) at the top with the MLProject file specifying the environment (e.g. docker or conda, with relevant env files also in the directory). Projects also have [entry points](https://www.mlflow.org/docs/latest/projects.html), which are commands that are meant to run for the project e.g. to train the model (entry points in an MLProject are similar to targets in a Makefile).
 
-The mlflow CLI can then read a project and know how to recreate its environment for running. You can call `mlflow run` on a local or git directory and specify an entry point (or leave this for the default one) and mlflow will then run that entry point e.g. a training job. Entrypoints can also be chained together to make[multi-step workflows](https://github.com/mlflow/mlflow/tree/master/examples/multistep_workflow).
+The mlflow CLI can then read a project and know how to recreate its environment for running. You can call `mlflow run` on a local or git directory and specify an entry point (or leave this for the default one) and mlflow will then run that entry point e.g. a training job. Entrypoints can also be chained together to make [multi-step workflows](https://github.com/mlflow/mlflow/tree/master/examples/multistep_workflow).
 
 Projects can also have multiple backends, which are configurations for running the project in different types of environments. For example, a [kubernetes backend](https://mlflow.org/docs/latest/projects.html#execution-guide) can be added for running in kubernetes.
 
