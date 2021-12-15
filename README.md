@@ -8,7 +8,7 @@ Understanding MLOps platforms is complex. Platforms have their own specializatio
 
 Even platforms that have a similar scope have different concepts and strategies, making them hard to compare directly. This repository provides resources for evaluating MLOps platforms.
 
-If you're wondering what process to use to evaluate MLOps platforms, see the [Thoughtworks Guide](https://www.thoughtworks.com/what-we-do/data-and-ai/cd4ml/guide-to-evaluating-mlops-platforms). If you know how to evaluate MLOps platforms and want materials, read on.
+If you're wondering what process to use to evaluate MLOps platforms, see the [Thoughtworks Guide](https://www.thoughtworks.com/what-we-do/data-and-ai/cd4ml/guide-to-evaluating-mlops-platforms) and the [webinar recording](https://www.thoughtworks.com/what-we-do/data-and-ai/cd4ml/guide-to-evaluating-mlops-platforms1). If you know how to evaluate MLOps platforms and want materials, read on.
 
 ### Comparison Matrix Format
 
