@@ -27,7 +27,7 @@ If you can't access or don't like google sheets then there is a [translation of 
 These profiles are concise marketing-free introductions to key concepts of MLOps platforms. This provides just enough context to make sense of the features in the matrix.
 
 - [AWS Sagemaker](AWS_Google_Azure.md#amazon), [Google Vertex](AWS_Google_Azure.md#google) and [Microsoft Azure ML](AWS_Google_Azure.md#azure)
-- [Databricks](Dataiku_Databricks_h2o.md#databricks-lakehouse-platform), [Dataiku](Dataiku_Databricks_h2o.md#dataiku)
+- [Databricks](Dataiku_Databricks.md#databricks-lakehouse-platform), [Dataiku](Dataiku_Databricks.md#dataiku)
 - [h2o](h2o_knime.md#h2oai) and [KNIME](h2o_knime.md#knime)
 - [kubeflow](kubeflow_mlflow.md#kubeflow) and [mlflow](kubeflow_mlflow.md#mlflow)
 
